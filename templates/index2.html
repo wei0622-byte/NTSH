@@ -1,0 +1,245 @@
+<!--
+檔案清單 (下載或複製到你的專案資料夾):
+- index.html          (首頁，導覽與連結)
+- about.html          (自傳 / 個人簡介)
+- resume.html         (履歷 / 學業成果)
+- portfolio.html      (作品集 / 比賽 / 專題)
+- certificates.html   (證書、成績單掃描圖檔連結)
+- styles.css          (共用樣式)
+
+把這些檔案放在同一個資料夾，然後用 GitHub Pages 或 Netlify 部署即可。
+-->
+
+<!-- styles.css -->
+<style>
+:root{
+  --bg:#f7f9fb; --card:#ffffff; --accent:#0b76ef; --muted:#666;
+  --maxw:900px;
+}
+*{box-sizing:border-box}
+body{font-family: Noto Sans, Arial, Helvetica, sans-serif;background:var(--bg);color:#222;margin:0;padding:24px;display:flex;justify-content:center}
+.container{max-width:var(--maxw);width:100%}
+.header{display:flex;align-items:center;gap:16px}
+.logo{width:64px;height:64px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#3dd);
+  display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(12,24,40,0.06);margin-top:18px}
+.nav{display:flex;gap:10px;flex-wrap:wrap}
+.nav a{padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--accent);border:1px solid transparent}
+.nav a:hover{background:rgba(11,118,239,0.08)}
+.grid{display:grid;grid-template-columns:1fr 300px;gap:18px;margin-top:18px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.section-title{font-size:18px;margin:0 0 8px 0}
+.item-list{display:flex;flex-direction:column;gap:10px}
+.item{padding:12px;border-radius:10px;border:1px solid #eef3fb}
+.small{color:var(--muted);font-size:13px}
+.footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+.download-btn{display:inline-block;padding:10px 14px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none}
+</style>
+
+<!-- index.html -->
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>備審資料 - 新北高中的學生</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">NB</div>
+      <div>
+        <h1 style="margin:0">備審資料展示頁</h1>
+        <div class="small">新北高中 • 申請大學用靜態網站範例</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <nav class="nav">
+        <a href="index.html">首頁</a>
+        <a href="about.html">自傳 / 個人簡介</a>
+        <a href="resume.html">履歷 / 成績</a>
+        <a href="portfolio.html">作品集 / 專題</a>
+        <a href="certificates.html">證書 / 成績單</a>
+      </nav>
+
+      <div class="grid">
+        <main>
+          <h2 class="section-title">快速導覽</h2>
+          <div class="item-list">
+            <div class="item">
+              <strong>自傳 / 個人簡介</strong>
+              <div class="small">介紹你學習歷程、社團經歷與志願動機。</div>
+              <div style="margin-top:8px"><a class="download-btn" href="about.html">查看自傳</a></div>
+            </div>
+
+            <div class="item">
+              <strong>履歷 / 成績</strong>
+              <div class="small">學科成績、加權排名、重要獎項、課程表。</div>
+              <div style="margin-top:8px"><a class="download-btn" href="resume.html">查看履歷</a></div>
+            </div>
+
+            <div class="item">
+              <strong>作品集 / 專題</strong>
+              <div class="small">各類競賽作品、專題成果、圖像或作品連結。</div>
+              <div style="margin-top:8px"><a class="download-btn" href="portfolio.html">查看作品集</a></div>
+            </div>
+
+            <div class="item">
+              <strong>證書 / 成績單</strong>
+              <div class="small">掃描檔或 PDF，供審查參考。</div>
+              <div style="margin-top:8px"><a class="download-btn" href="certificates.html">查看證書</a></div>
+            </div>
+          </div>
+        </main>
+
+        <aside>
+          <div class="item">
+            <strong>聯絡資訊</strong>
+            <div class="small">姓名：張同學（範例）<br>學校：新北高中<br>Email：example@email.com</div>
+          </div>
+
+          <div class="item" style="margin-top:12px">
+            <strong>下載 ZIP</strong>
+            <div class="small">把整份備審資料打包成 ZIP，方便寄送給學校（範例連結為空）。</div>
+            <div style="margin-top:8px"><a class="download-btn" href="#">下載 ZIP</a></div>
+          </div>
+
+          <div class="item" style="margin-top:12px">
+            <strong>部署建議</strong>
+            <div class="small">建議使用 GitHub Pages 或 Netlify 部署，並在申請表內填寫公開連結。</div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="footer">注意：上傳個資前請確認學校是否同意線上公開證明文件。</div>
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- about.html -->
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>自傳 - 備審資料</title>
+</head>
+<body style="background:var(--bg);font-family:Noto Sans, Arial; padding:20px;">
+  <div class="container">
+    <a href="index.html">← 回首頁</a>
+    <div class="card">
+      <h2>自傳 / 個人簡介</h2>
+      <p class="small">（以下為範例段落，請替換為你的真實內容）</p>
+
+      <h3>學習歷程</h3>
+      <p>我從高一開始對資訊科技產生興趣，參加校內程式設計社團，並在校際競賽中獲得佳績。透過專題實作，我學會了需求分析與團隊協作。</p>
+
+      <h3>社團與服務</h3>
+      <p>擔任班級幹部與社團幹部，負責活動企劃與執行，提升組織與溝通能力。</p>
+
+      <h3>申請動機與未來計畫</h3>
+      <p>希望能進入資訊管理系深造，未來結合管理與技術，參與企業數位轉型專案。</p>
+
+      <div style="margin-top:12px">
+        <a class="download-btn" href="#">下載 PDF 版自傳（範例）</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- resume.html -->
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>履歷 / 成績</title>
+</head>
+<body style="background:var(--bg);font-family:Noto Sans, Arial; padding:20px;">
+  <div class="container">
+    <a href="index.html">← 回首頁</a>
+    <div class="card">
+      <h2>履歷 / 學業成果</h2>
+      <h3>基本資料</h3>
+      <p class="small">姓名｜張同學（範例）｜班級｜聯絡方式</p>
+
+      <h3>學業成績</h3>
+      <ul>
+        <li>高一上：平均 85</li>
+        <li>高一下：平均 88</li>
+        <li>高二上：平均 90</li>
+      </ul>
+
+      <h3>重要獎項</h3>
+      <ol>
+        <li>程式設計競賽 校內第一名（2024）</li>
+        <li>數學競賽 優良獎（2023）</li>
+      </ol>
+
+      <div style="margin-top:12px"><a class="download-btn" href="#">下載完整成績單（範例）</a></div>
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- portfolio.html -->
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>作品集 / 專題</title>
+</head>
+<body style="background:var(--bg);font-family:Noto Sans, Arial; padding:20px;">
+  <div class="container">
+    <a href="index.html">← 回首頁</a>
+    <div class="card">
+      <h2>作品集 / 專題</h2>
+      <p class="small">在此放置作品縮圖、專題簡介與 GitHub 連結。</p>
+
+      <h3>專題：校園導覽系統</h3>
+      <p>說明：負責前端頁面與路徑規劃演算法，使用 HTML/CSS/JavaScript。</p>
+      <p><a href="#">GitHub 原始碼（範例）</a>｜<a href="#">線上 Demo（範例）</a></p>
+
+      <h3>競賽作品：智慧節能系統</h3>
+      <p>說明：團隊專題，負責資料收集與視覺化。獲得校內佳作。</p>
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- certificates.html -->
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>證書 / 成績單</title>
+</head>
+<body style="background:var(--bg);font-family:Noto Sans, Arial; padding:20px;">
+  <div class="container">
+    <a href="index.html">← 回首頁</a>
+    <div class="card">
+      <h2>證書 / 成績單</h2>
+      <p class="small">把掃描的證書上傳到 repository 或 CDN，並把連結放在下面：
+      （範例為佔位圖片）</p>
+
+      <ul>
+        <li><a href="#">程式設計競賽 證書（PDF）</a></li>
+        <li><a href="#">英語能力檢定 成績單（PDF）</a></li>
+        <li><a href="#">學校成績單（掃描）</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- 使用說明 (備註)
+1) 把每一段 HTML 存成對應檔名 (index.html, about.html, ...)。
+2) styles.css 的 <style> 目前直接放在每個檔案前面（為方便示範）。要更乾淨可把 <style> 的內容移到 styles.css，然後在 <head> 用 <link rel="stylesheet" href="styles.css">
+3) 若想要讓 PDF / 掃描檔可下載，將檔案上傳到 GitHub repository 的 'assets' 資料夾或使用雲端儲存，再把連結貼上。
+4) 想要我幫你把內容客製化（例如：換配色、加入照片、產生可下載 PDF、自動產生目錄），請直接說你想要的風格或要放的內容。
+-->
